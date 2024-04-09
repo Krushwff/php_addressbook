@@ -7,17 +7,17 @@
 Удаление контакта: Кнопка "Удалить" рядом с каждым контактом.
 
 ## Структура проекта
-- [index.php](https://github.com/Krushwff/php_addressbook/blob/main/index.php) 
+## [index.php](https://github.com/Krushwff/php_addressbook/blob/main/index.php) 
 - Загружает контакты из JSON файла с помощью getContactsFromJsonFile.
 - Обрабатывает POST-запрос для добавления нового контакта.
 - Обрабатывает запрос на удаление контакта.
 - Отображает таблицу контактов и форму для добавления нового контакта.
-- [contacts.php](https://github.com/Krushwff/php_addressbook/blob/main/src/contacts.php) 
+## [contacts.php](https://github.com/Krushwff/php_addressbook/blob/main/src/contacts.php) 
 - getContactsFromJsonFile($file): Функция для получения всех контактов из файла JSON с учетом кодировки.
 - saveContactsToJsonFile($contacts, $file): Функция для сохранения всех контактов в файл JSON с учетом кодировки.
 - deleteContact($contacts, $index): Функция для удаления контакта по индексу.
 - updateContact(&$contacts, $index, $updatedContact): Функция для обновления контакта.
-- [JSON](https://github.com/Krushwff/php_addressbook/blob/main/json_data/contacts.json)
+## [JSON](https://github.com/Krushwff/php_addressbook/blob/main/json_data/contacts.json)
 -  JSON файл для хранения контактов.
 
 ## Использование
