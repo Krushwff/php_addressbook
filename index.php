@@ -7,7 +7,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['btn_submit'])) {
     $allContacts[] = [
         'first_name' => $_POST['first_name'],
         'last_name' => $_POST['last_name'],
-        'address' => $_POST['address'],
         'contact_number' => $_POST['contact_number']
     ];
 
@@ -39,7 +38,6 @@ if (isset($_GET['action']) && $_GET['action'] === 'delete' && isset($_GET['index
         <tr>
             <th>Действия</th>
             <th>Имя</th>
-            <th>Адрес</th>
             <th>Контакт</th>
         </tr>
         </thead>
@@ -50,7 +48,6 @@ if (isset($_GET['action']) && $_GET['action'] === 'delete' && isset($_GET['index
                     <a href="?action=delete&index=<?= $index ?>" class="btn btn-danger">Удалить</a>
                 </td>
                 <td><?= htmlspecialchars($contact['last_name'] . ' ' . $contact['first_name']) ?></td>
-                <td><?= htmlspecialchars($contact['address']) ?></td>
                 <td><?= htmlspecialchars($contact['contact_number']) ?></td>
             </tr>
         <?php endforeach; ?>
@@ -65,9 +62,6 @@ if (isset($_GET['action']) && $_GET['action'] === 'delete' && isset($_GET['index
         </div>
         <div class="mb-3">
             <input type="text" name="contact_number" class="form-control" placeholder="Контактный номер" required>
-        </div>
-        <div class="mb-3">
-            <textarea name="address" class="form-control" placeholder="Адрес" required></textarea>
         </div>
         <div class="mb-3">
             <button type="submit" name="btn_submit" class="btn btn-primary">Добавить контакт</button>
